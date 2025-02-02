@@ -3,16 +3,36 @@ import { FaArrowDown } from "react-icons/fa";
 
 export default function Home() {
 	return (
-		<div className='flex flex-col items-center min-h-screen font-sans bg-gray-100'>
+		<div className='flex flex-col items-center min-h-screen font-sans bg-gray-200'>
+			<header className='flex items-center justify-between w-full p-6'>
+				<div className='flex items-center'>
+					<Image
+						src='/product.webp'
+						alt='Amazing Product'
+						width={50}
+						height={50}
+						className='rounded-full'
+					/>
+				</div>
+				<nav>
+					<ul className='flex items-center font-semibold text-slate-800 justify-between w-full'>
+						<li className='mr-6'>Home</li>
+						<li className='mr-6'>About</li>
+						<li className='mr-6'>Contact</li>
+						<li className='mr-6'>Login</li>
+						<li className='mr-6'>Sign Up</li>
+					</ul>
+				</nav>
+			</header>
 			{/* Header Section */}
-			<section className='flex flex-col items-center justify-center h-screen p-6 sm:p-12 relative text-center bg-gradient-to-b from-white to-gray-200 shadow-lg w-full'>
+			<section className='flex flex-col items-center justify-center p-6 sm:p-12 relative text-center bg-gradient-to-b from-white to-gray-200 shadow-lg w-full'>
 				<header className='text-5xl font-extrabold text-gray-900 my-6 drop-shadow-lg'>
 					Discover the Future with{" "}
 					<span className='text-blue-500'>Amazing Product</span>
 				</header>
 
 				{/* Product Image */}
-				<div className='relative w-96 h-96 flex items-center justify-center bg-white rounded-full shadow-2xl border-4 border-gray-100'>
+				<div className='relative flex items-center justify-center bg-white rounded-full shadow-2xl border-4 border-gray-200 hover:drop-shadow-2xl duration-1000'>
 					<Image
 						src='/product.webp'
 						alt='Amazing Product'
@@ -30,7 +50,7 @@ export default function Home() {
 				</p>
 
 				{/* Scroll Down Indicator */}
-				<div className='absolute bottom-10 animate-bounce text-gray-600 text-3xl'>
+				<div className='absolute bottom-4 animate-bounce text-gray-600 text-3xl'>
 					<FaArrowDown />
 				</div>
 			</section>
